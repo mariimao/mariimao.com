@@ -1,0 +1,98 @@
+:root {
+    --darkred: #5d140e;
+    --midred: #9a5752;
+    --lightred: #b88581;
+    --lighterred: #f5d2cf;
+    --lightestred: #fbefef;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+* {
+	--color-change-speed: 300ms;
+	
+	-webkit-transition: color var(--color-change-speed) linear!important;
+	-ms-transition: color var(--color-change-speed) linear!important;
+	transition: color var(--color-change-speed) linear!important;
+	
+	-webkit-transition: background-color color var(--color-change-speed) linear!important;
+	-ms-transition: background-color var(--color-change-speed) linear!important;
+	transition: background-color var(--color-change-speed) linear!important;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    width: 100vw;
+    height: fit-content;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    width: 100vw;
+    background-color: var(--midred);
+    color: white;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.scallop-container {
+    display: flex;
+    position: inherit;
+    overflow: hidden;
+}
+
+.scallop {
+    width: 96px;
+    height: 24px;
+    background-size: cover;
+    flex-shrink: 0; /* Prevents scallops from shrinking */
+}
+
+#logoandnav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 3em;
+    background-color: var(--midred);
+    z-index: 1000;
+    border-bottom: 5px solid var(--darkred);
+}
+
+#logo {
+    align-items: center;
+    color: white;
+
+}
+
+.light-awning {
+    background-image: url('attachments/light-awning.svg');
+}
+
+#navbar ul {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    list-style-type: none;
+}
