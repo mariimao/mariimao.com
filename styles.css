@@ -1,30 +1,49 @@
 :root {
     --darkred: #5d140e;
     --midred: #9a5752;
+    /* --midred: #ecb4b0; */
     --lightred: #b88581;
     --lighterred: #f5d2cf;
     --lightestred: #fbefef;
     --outline-thickness: 1px;
     --yellow: #fff2b5;
+    --orange: #ffc87e;
+    --darkblue: #170e5d;
+    --midblue: #262a67;
+    --blue1: #3b3f80;
+    --blue2: #615aa9;
+    --blue3: #686db3;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     font-family: 'Nunito', sans-serif;
     font-size: 12px;
 }
 
+html {
+    /* scrollbar-gutter: stable; */
+    /* max-width: 100vw; */
+    overflow-x: hidden;
+    /* Hide horizontal scrollbar */
+    /* overflow-y: scroll; */
+    scroll-behavior: smooth;
+    min-height: 100vh;
+}
+
 * {
-	--color-change-speed: 300ms;
-	
-	-webkit-transition: color var(--color-change-speed) linear!important;
-	-ms-transition: color var(--color-change-speed) linear!important;
-	transition: color var(--color-change-speed) linear!important;
-	
-	-webkit-transition: background-color color var(--color-change-speed) linear!important;
-	-ms-transition: background-color var(--color-change-speed) linear!important;
-	transition: background-color var(--color-change-speed) linear!important;
+    --color-change-speed: 300ms;
+
+    -webkit-transition: color var(--color-change-speed) linear !important;
+    -ms-transition: color var(--color-change-speed) linear !important;
+    transition: color var(--color-change-speed) linear !important;
+
+    -webkit-transition: background-color color var(--color-change-speed) linear !important;
+    -ms-transition: background-color var(--color-change-speed) linear !important;
+    transition: background-color var(--color-change-speed) linear !important;
 }
 
 body {
@@ -32,6 +51,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-color: var(--lightestred);
+    /* overflow: hidden; */
 }
 
 #header {
@@ -49,6 +69,7 @@ main {
     align-items: center;
     justify-content: center;
     max-width: 100vw;
+    color: var(--darkred);
 }
 
 #footer {
@@ -57,9 +78,10 @@ main {
     color: white;
     padding: 2em 0;
     text-align: center;
+    border: 2px solid var(--darkred);
 }
 
-#copyright p{
+#copyright p {
     font-size: 1.5em;
     font-weight: bold;
 }
@@ -74,7 +96,8 @@ main {
     width: 96px;
     height: 24px;
     background-size: cover;
-    flex-shrink: 0; /* Prevents scallops from shrinking */
+    flex-shrink: 0;
+    /* Prevents scallops from shrinking */
 }
 
 #logoandnav {
@@ -92,7 +115,8 @@ main {
     align-items: center;
 }
 
-#logo {
+#logo-light,
+#logo-dark {
     width: 200px;
     height: fill-available;
 }
@@ -107,7 +131,7 @@ main {
     list-style-type: none;
 }
 
-#navbar ul li a{
+#navbar ul li a {
     text-decoration: none;
     color: white;
     padding: 0.5em 0.7em;
@@ -115,7 +139,7 @@ main {
     font-size: 1.5em;
     font-weight: bold;
     border-radius: 2em;
-    border: 2px solid var(--midred);
+    border: 2px solid transparent;
 }
 
 #navbar ul li a:hover {
@@ -124,7 +148,7 @@ main {
     border-color: var(--darkred);
 }
 
-#toggle-dark-mode {
+#darkToggle {
     width: 48px;
     height: auto;
     cursor: pointer;
@@ -132,17 +156,17 @@ main {
     border: 0;
 }
 
-#toggle-dark-mode span img {
+#darkToggle span img {
     width: 4em;
     height: auto;
 }
 
 .light-mode .light-mode-toggle {
-	display: none;
+    display: none;
 }
 
 .dark-mode .dark-mode-toggle {
-	display: none;
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -155,18 +179,83 @@ main {
 /* scrollbar */
 /* This applies to the whole page */
 body::-webkit-scrollbar {
-    width: 15px; /* Width of the scrollbar */
+    width: 15px;/* Width of the scrollbar */
 }
 
 body::-webkit-scrollbar-track {
-    background: var(--lighterred); /* Color of the track */
+    background: var(--lighterred);
+    /* Color of the track */
 }
 
 body::-webkit-scrollbar-thumb {
-    background: var(--darkred); /* Color of the scroll thumb */
+    background: var(--darkred);
+    /* Color of the scroll thumb */
 }
 
-body::-webkit-scrollbar-thumb:hover {
-    background: var(--midred); /* Color of the scroll thumb on hover */
+body::-webkit-scrollbar-thumb {
+    background: var(--midred);
+    /* Color of the scroll thumb on hover */
 }
 
+/* Darkmode */
+.light-mode #logo-light {
+    display: block;
+}
+
+.light-mode #logo-dark {
+    display: none;
+}
+
+.dark-mode #logo-light {
+    display: none;
+}
+
+.dark-mode #logo-dark {
+    display: block;
+}
+
+
+.dark-mode body {
+    background-color: var(--blue3);
+}
+
+.dark-mode #header #logoandnav {
+    background-color: var(--midblue);
+    border-color: var(--darkblue);
+}
+
+.dark-mode #footer {
+    background-color: var(--midblue);
+    border-color: var(--darkblue);
+    color: var(--yellow);
+}
+
+.dark-mode #logoandnav {
+    background-color: var(--darkred);
+}
+
+.dark-mode #navbar ul li a {
+    color: var(--yellow);
+}
+
+.dark-mode #navbar ul li a:hover {
+    background-color: var(--yellow);
+    color: var(--darkblue);
+    border-color: var(--orange);
+}
+
+.dark-mode .awning {
+    background-image: url('attachments/awning-dark.svg');
+}
+
+.dark-mode body::-webkit-scrollbar-track {
+    background: var(--midblue); /* Adjust scrollbar track color in dark mode */
+}
+
+.dark-mode body::-webkit-scrollbar-thumb {
+    background: var(--darkblue); /* Adjust scrollbar thumb color in dark mode */
+}
+
+.dark-mode body::-webkit-scrollbar-thumb:hover {
+    background: var(--blue2); /* Adjust scrollbar thumb hover color in dark mode */
+}
