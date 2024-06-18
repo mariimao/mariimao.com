@@ -4,14 +4,15 @@
     --lightred: #b88581;
     --lighterred: #f5d2cf;
     --lightestred: #fbefef;
-    --outline-thickness: 5px;
+    --outline-thickness: 1px;
+    --yellow: #fff2b5;
 }
 
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     font-family: 'Nunito', sans-serif;
-    max-width: 100vw;
+    font-size: 12px;
 }
 
 * {
@@ -30,11 +31,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: var(--lightestred);
 }
 
-header {
+#header {
     width: 100vw;
-    height: fit-content;
+    height: 15vh;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -42,20 +44,24 @@ header {
 
 main {
     flex-grow: 1;
-    max-width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 100vw;
 }
 
-footer {
+#footer {
     width: 100vw;
     background-color: var(--midred);
     color: white;
     padding: 2em 0;
     text-align: center;
-    border-top: var(--outline-thickness) solid var(--darkred);
+}
+
+#copyright p{
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 .scallop-container {
@@ -72,37 +78,95 @@ footer {
 }
 
 #logoandnav {
-    position: relative;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 3em;
+    padding: 0.8em 3em;
     background-color: var(--midred);
     z-index: 1000;
     border-bottom: var(--outline-thickness) solid var(--darkred);
 }
 
-#logo {
+#navbar {
+    display: flex;
     align-items: center;
-    color: white;
-
 }
 
-.light-awning {
-    background-image: url('attachments/light-awning.svg');
+#logo {
+    width: 200px;
+    height: fill-available;
+}
+
+.awning {
+    background-image: url('attachments/awning-light.svg');
 }
 
 #navbar ul {
     display: flex;
     flex-direction: row;
-    text-decoration: none;
     list-style-type: none;
+}
+
+#navbar ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 0.5em 0.7em;
+    margin: 0 0.3em;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 2em;
+    border: 2px solid var(--midred);
+}
+
+#navbar ul li a:hover {
+    background-color: var(--yellow);
+    color: var(--midred);
+    border-color: var(--darkred);
+}
+
+#toggle-dark-mode {
+    width: 48px;
+    height: auto;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+}
+
+#toggle-dark-mode span img {
+    width: 4em;
+    height: auto;
+}
+
+.light-mode .light-mode-toggle {
+	display: none;
+}
+
+.dark-mode .dark-mode-toggle {
+	display: none;
 }
 
 @media screen and (max-width: 768px) {
     #navbar ul {
-        flex-direction: column;
-        align-items: center;
+        display: none;
     }
 }
+
+
+/* scrollbar */
+/* This applies to the whole page */
+body::-webkit-scrollbar {
+    width: 15px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--lighterred); /* Color of the track */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--darkred); /* Color of the scroll thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--midred); /* Color of the scroll thumb on hover */
+}
+
