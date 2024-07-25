@@ -78,7 +78,7 @@ main {
     color: white;
     padding: 2em 0;
     text-align: center;
-    border: 2px solid var(--darkred);
+    border-top: 2px solid var(--darkred);
 }
 
 #copyright p {
@@ -185,14 +185,16 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-track {
     background: var(--lighterred);
     /* Color of the track */
+    border-radius: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
     background: var(--darkred);
+    border-radius: 10px;
     /* Color of the scroll thumb */
 }
 
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb:hover {
     background: var(--midred);
     /* Color of the scroll thumb on hover */
 }
