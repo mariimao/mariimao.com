@@ -9,6 +9,7 @@ function initializeDarkModeToggle() {
         htmlElement.classList.add(currentTheme);
     } else {
         htmlElement.classList.add('light-mode');
+        themeColorMetaTag.setAttribute('content', '#9a5752');
     }
 
     darkToggle.addEventListener('click', function() {
