@@ -21,7 +21,7 @@ function initializeDarkModeToggle() {
             htmlElement.classList.remove('dark-mode');
             htmlElement.classList.add('light-mode');
             localStorage.setItem('theme', 'light-mode');
-            themeColorMetaTag.setAttribute('content', '#f5d2cf');
+            themeColorMetaTag.setAttribute('content', '#9a5752');
         }
     });
 }
