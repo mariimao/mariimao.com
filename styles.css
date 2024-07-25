@@ -104,10 +104,10 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8em 3em;
+    padding: 0.8em 1.5em;
     background-color: var(--midred);
     z-index: 1000;
-    border-bottom: var(--outline-thickness) solid var(--darkred);
+    border-bottom: 2px solid var(--darkred);
 }
 
 #navbar {
@@ -129,6 +129,7 @@ main {
     display: flex;
     flex-direction: row;
     list-style-type: none;
+    padding-right: 1em;
 }
 
 #navbar ul li a {
