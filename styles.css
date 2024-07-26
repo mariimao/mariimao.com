@@ -266,23 +266,23 @@ body::-webkit-scrollbar-thumb:hover {
 
 #home-wall {
     background-image: url(attachments/home-background.svg), url('attachments/home-wall.svg'); 
-    background-size: auto 100%,cover; 
+    background-size: 120vh,cover; 
     background-position: center center,center left; 
     background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (orientation: portrait) {
     #home-wall {
-        background-position: 68% center,center center;
-        background-size: auto 100vh, cover; 
+        background-image: url(attachments/home-background-mobile.svg), url('attachments/home-wall.svg'); 
+        background-size: 90vh,cover;
+        background-position: center top 40%,center left; 
     }
-    
 }
 
-/* @media screen and (max-height: 268px) {
+@media screen and (max-height: 390px) and (orientation: landscape) {
     #home-wall {
-        background-position: 70% center,center center;
-        background-size: auto 90%, cover; 
+        background-image: url(attachments/home-background-wide.svg), url('attachments/home-wall.svg'); 
+        background-size: 90vw,cover;
+        background-position: center bottom ,center left; 
     }
-    
-} */
+}
