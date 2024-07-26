@@ -78,7 +78,7 @@ main {
     color: white;
     padding: 2em 0;
     text-align: center;
-    border-top: 2px solid var(--darkred);
+    border-top: 3px solid var(--darkred);
 }
 
 #copyright p {
@@ -94,7 +94,7 @@ main {
 
 .scallop {
     width: 96px;
-    height: 24px;
+    height: 29px;
     background-size: cover;
     flex-shrink: 0;
     /* Prevents scallops from shrinking */
@@ -107,7 +107,7 @@ main {
     padding: 0.8em 1.5em;
     background-color: var(--midred);
     z-index: 1000;
-    border-bottom: 2px solid var(--darkred);
+    border-bottom: 3px solid var(--darkred);
 }
 
 #navbar {
@@ -262,3 +262,27 @@ body::-webkit-scrollbar-thumb:hover {
 .dark-mode body::-webkit-scrollbar-thumb:hover {
     background: var(--blue2); /* Adjust scrollbar thumb hover color in dark mode */
 }
+
+
+#home-wall {
+    background-image: url(attachments/home-background.svg), url('attachments/home-wall.svg'); 
+    background-size: auto auto,cover; 
+    background-position: center center,center center; 
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+    #home-wall {
+        background-position: 68% center,center center;
+        background-size: auto auto, cover; 
+    }
+    
+}
+
+/* @media screen and (max-height: 268px) {
+    #home-wall {
+        background-position: 70% center,center center;
+        background-size: auto 90%, cover; 
+    }
+    
+} */

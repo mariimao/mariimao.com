@@ -1,0 +1,13 @@
+{
+    "name": "mariimao",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "sass src/css/styles.scss src/css/styles.css",
+      "start": "php -S 0.0.0.0:80 -t src/php"
+    },
+    "dependencies": {
+      "bootstrap": "^5.0.0",
+      "sass": "^1.32.0"
+    }
+  }
+  
