@@ -266,7 +266,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 #home-wall {
     background-image: url(attachments/home-background.svg), url('attachments/home-wall.svg'); 
-    background-size: auto auto,cover; 
+    background-size: auto 100vh,cover; 
     background-position: center center,center center; 
     background-repeat: no-repeat;
 }
@@ -274,7 +274,7 @@ body::-webkit-scrollbar-thumb:hover {
 @media screen and (max-width: 768px) {
     #home-wall {
         background-position: 68% center,center center;
-        background-size: auto auto, cover; 
+        background-size: auto 100vh, cover; 
     }
     
 }
