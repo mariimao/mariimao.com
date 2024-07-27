@@ -266,23 +266,42 @@ body::-webkit-scrollbar-thumb:hover {
 
 #home-wall {
     background-image: url(attachments/home-background.svg), url('attachments/home-wall.svg'); 
-    background-size: 120vh,cover; 
+    background-size: 80vw,cover; 
     background-position: center center,center left; 
     background-repeat: no-repeat;
 }
 
-@media screen and (orientation: portrait) {
+.dark-mode #home-wall {
+    background-image: url(attachments/home-background-dark.svg), url('attachments/home-wall-dark.svg'); 
+    background-size: 80vw,cover; 
+    background-position: center center,center left; 
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
     #home-wall {
         background-image: url(attachments/home-background-mobile.svg), url('attachments/home-wall.svg'); 
-        background-size: 90vh,cover;
+        background-size: 90vw,cover;
+        background-position: center top 40%,center left; 
+    }
+
+    .dark-mode #home-wall {
+        background-image: url(attachments/home-background-mobile-dark.svg), url('attachments/home-wall-dark.svg'); 
+        background-size: 90vw,cover;
         background-position: center top 40%,center left; 
     }
 }
 
-@media screen and (max-height: 390px) and (orientation: landscape) {
+/* @media screen and (max-height: 490px) and (orientation: landscape) {
     #home-wall {
         background-image: url(attachments/home-background-wide.svg), url('attachments/home-wall.svg'); 
-        background-size: 90vw,cover;
+        background-size: 100%,cover;
         background-position: center bottom ,center left; 
     }
-}
+
+    .dark-mode #home-wall {
+        background-image: url(attachments/home-background-wide-dark.svg), url('attachments/home-wall-dark.svg'); 
+        background-size: 90vh,cover;
+        background-position: center bottom ,center left; 
+    }
+} */

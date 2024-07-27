@@ -3,10 +3,10 @@
 <rect width="937" height="284" transform="matrix(1 0 0 -1 0 284)" fill="#D9D9D9"/>
 </mask>
 <g mask="url(#mask0_62_457)">
-<path opacity="0.75" d="M63 50C63 174.8 -38.3914 276 -163.5 276C-288.609 276 -390 174.8 -390 50C-390 -74.8003 -288.609 -176 -163.5 -176C-38.3914 -176 63 -74.8003 63 50Z" fill="#5D140E" stroke="#5D140E" stroke-width="16"/>
-<circle opacity="0.75" cx="304" cy="50" r="226" fill="#5D140E" stroke="#5D140E" stroke-width="16"/>
-<circle opacity="0.75" cx="773" cy="50" r="226" fill="#5D140E" stroke="#5D140E" stroke-width="16"/>
-<path d="M461 -2C461 122.8 359.609 224 234.5 224C109.391 224 8 122.8 8 -2C8 -126.8 109.391 -228 234.5 -228C359.609 -228 461 -126.8 461 -2Z" fill="#F5D2CF" stroke="#5D140E" stroke-width="16"/>
-<circle cx="703" cy="-2" r="226" fill="#B18783" stroke="#5D140E" stroke-width="16"/>
+<path opacity="0.75" d="M58 50C58 172.029 -41.1428 271 -163.5 271C-285.857 271 -385 172.029 -385 50C-385 -72.0288 -285.857 -171 -163.5 -171C-41.1428 -171 58 -72.0288 58 50Z" fill="#5D140E" stroke="#5D140E" stroke-width="26"/>
+<circle opacity="0.75" cx="304" cy="50" r="221" fill="#5D140E" stroke="#5D140E" stroke-width="26"/>
+<circle opacity="0.75" cx="773" cy="50" r="221" fill="#5D140E" stroke="#5D140E" stroke-width="26"/>
+<path d="M456 -2C456 120.029 356.857 219 234.5 219C112.143 219 13 120.029 13 -2C13 -124.029 112.143 -223 234.5 -223C356.857 -223 456 -124.029 456 -2Z" fill="#F5D2CF" stroke="#5D140E" stroke-width="26"/>
+<circle cx="703" cy="-2" r="221" fill="#B18783" stroke="#5D140E" stroke-width="26"/>
 </g>
 </svg>
