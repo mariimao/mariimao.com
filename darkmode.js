@@ -32,4 +32,6 @@ function initializeDarkModeToggle() {
     });
 }
 
-initializeDarkModeToggle();
+document.addEventListener('DOMContentLoaded', function() {
+    initializeDarkModeToggle();
+});

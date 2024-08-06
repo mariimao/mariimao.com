@@ -1,12 +1,12 @@
-<svg width="937" height="284" viewBox="0 0 937 284" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_81_456" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="937" height="284">
-<rect width="937" height="284" transform="matrix(1 0 0 -1 0 284)" fill="#D9D9D9"/>
+<svg width="937" height="294" viewBox="0 0 937 294" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_81_456" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="937" height="294">
+<rect width="937" height="294" transform="matrix(1 0 0 -1 0 294)" fill="#D9D9D9"/>
 </mask>
 <g mask="url(#mask0_81_456)">
-<path opacity="0.75" d="M58 50C58 172.029 -41.1428 271 -163.5 271C-285.857 271 -385 172.029 -385 50C-385 -72.0288 -285.857 -171 -163.5 -171C-41.1428 -171 58 -72.0288 58 50Z" fill="#170E5D" stroke="#170E5D" stroke-width="26"/>
-<circle opacity="0.75" cx="304" cy="50" r="221" fill="#170E5D" stroke="#170E5D" stroke-width="26"/>
-<circle opacity="0.75" cx="773" cy="50" r="221" fill="#170E5D" stroke="#170E5D" stroke-width="26"/>
-<path d="M456 -2C456 120.029 356.857 219 234.5 219C112.143 219 13 120.029 13 -2C13 -124.029 112.143 -223 234.5 -223C356.857 -223 456 -124.029 456 -2Z" fill="#615AA9" stroke="#170E5D" stroke-width="26"/>
-<circle cx="703" cy="-2" r="221" fill="#3B3F90" stroke="#170E5D" stroke-width="26"/>
+<path opacity="0.75" d="M58 38C58 160.029 -41.1428 259 -163.5 259C-285.857 259 -385 160.029 -385 38C-385 -84.0288 -285.857 -183 -163.5 -183C-41.1428 -183 58 -84.0288 58 38Z" fill="#170E5D" stroke="#170E5D" stroke-width="26"/>
+<circle opacity="0.75" cx="304" cy="38" r="221" fill="#170E5D" stroke="#170E5D" stroke-width="26"/>
+<circle opacity="0.75" cx="773" cy="38" r="221" fill="#170E5D" stroke="#170E5D" stroke-width="26"/>
+<path d="M456 -14C456 108.029 356.857 207 234.5 207C112.143 207 13 108.029 13 -14C13 -136.029 112.143 -235 234.5 -235C356.857 -235 456 -136.029 456 -14Z" fill="#615AA9" stroke="#170E5D" stroke-width="26"/>
+<circle cx="703" cy="-14" r="221" fill="#3B3F90" stroke="#170E5D" stroke-width="26"/>
 </g>
 </svg>
