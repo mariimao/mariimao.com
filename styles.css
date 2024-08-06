@@ -167,14 +167,15 @@ main {
     border: 0;
 }
 
-#darkToggle span img{
+#darkToggle span img {
     width: 4em;
     height: auto;
 }
 
-#menuToggle img{
+#menuToggle img {
     width: 4em;
     height: auto;
+    padding-left: 1em;
 }
 
 .light-mode .light-mode-toggle {
@@ -189,17 +190,23 @@ main {
     display: none;
 }
 
-@media screen and (max-width: 768px) {
+/* TODO */
+@media screen and (max-width: 800px) {
     #navbar ul {
-        display: none;
+        /* display: block; */
+        flex-direction: column;
+        list-style-type: none;
+        padding-right: 1em;
+        position: absolute;
+        top: 100%;
+        background-color: var(--midred);
+        border-radius: 1em;
+        border: 4px solid var(--darkred);
+        padding: 1em
     }
 
     #menuToggle {
         display: block;
-    }
-
-    #darkToggle {
-        display: none;
     }
 }
 
@@ -289,8 +296,9 @@ body::-webkit-scrollbar-thumb:hover {
 
 #home-wall {
     background-image: url('attachments/home-wall.svg'); 
-    background-size: 100%; 
+    /* background-size: 100$;  */
     background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .dark-mode #home-wall {
@@ -466,7 +474,7 @@ body::-webkit-scrollbar-thumb:hover {
     color: inherit; /* Ensure link color is inherited on hover and focus */
 }
 
-@media screen and (max-width: 768px), screen and (orientation: portrait) {
+@media screen and (max-width: 800px), screen and (orientation: portrait) {
     #home {
         background-image: url(attachments/home-background-mobile.svg);
         background-size: 100vw; 
