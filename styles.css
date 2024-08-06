@@ -59,7 +59,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--lightestred);
+    background-color: var(--midred);
     /* overflow: hidden; */
 }
 
@@ -252,7 +252,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .dark-mode body {
-    background-color: var(--blue3);
+    background-color: var(--midblue);
 }
 
 .dark-mode #header #logoandnav {
