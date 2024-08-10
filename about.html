@@ -1,21 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mary Zhao</title>
+    <meta id="theme-color" name="theme-color" content="9a5752"/>
+    <meta name="Mariimao Homepage" content="Check out my website!">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="attachments/favicon.svg"/>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
 </head>
 
-<body>
-    <div id="header"></div>
-    <main>
-        <h1>Welcome to my website</h1>
-        <p>this is the.</p>
-    </main>
-    <footer>
-        <p>&copy; 2020 My Website</p>
-    </footer>
+<body id="home-wall">
+    <div id="header">
+        <div id="logoandnav">
+            <a href="/">
+                <img id="logo-light" src="attachments/logo.svg" alt="mariimao" title="Go to home">
+                <img id="logo-dark" src="attachments/logo-dark.svg" alt="mariimao" title="Go to home">
+            </a>
+            <nav id="navbar">
+                <ul id="navlinks">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="attachments/Resume.pdf" target="_blank">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button id="darkToggle" aria-label="Toggle dark mode" title="Switch to dark mode">
+                    <span class="light-mode-toggle">
+                        <img id="mode-dark" src="attachments/mode-dark.svg" alt="Moon icon to switch to dark mode">
+                    </span>
+                    <span class="dark-mode-toggle">
+                        <img id="mode-light" src="attachments/mode-light.svg" alt="Sun icon to switch to light mode">
+                    </span>
+                </button>
+            
+                <button id="menuToggle" aria-label="Toggle menu" title="Open menu">
+                    <span class="light-menu-toggle">
+                        <img id="menu-dark" src="attachments/menu-dark.svg" alt="Menu icon to toggle navigation">
+                    </span>
+                    <span class="dark-menu-toggle">
+                        <img id="menu-light" src="attachments/menu-light.svg" alt="Menu icon to toggle navigation">
+                    </span>
+                </button>
+            </nav>
+        </div>
+        <div class="scallop-container"></div>
+        
 
-    <script src="script.js"></script>
+
+
+
+    </div>
+    <main id="about">
+    </main>
+
+    <div id="footer">
+        <div id="copyright">
+            <p>&copy; 2024 Mary Zhao</p>
+        </div>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+    <script src="darkmode.js"></script>
+    <script src="menu.js"></script>
+</body>
+
 </html>

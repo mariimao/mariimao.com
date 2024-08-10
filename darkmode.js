@@ -29,6 +29,14 @@ function initializeDarkModeToggle() {
             localStorage.setItem('theme', 'light-mode');
             themeColorMetaTag.setAttribute('content', '#9a5752'); // Light mode theme color
         }
+        darkToggle.style.outline = 'none'; // Remove focus outline
+    });
+    darkToggle.addEventListener('focusin', function() {
+        darkToggle.style.outline = '3px solid var(--yellow)';
+    });
+
+    darkToggle.addEventListener('focusout', function() {
+        darkToggle.style.outline = 'none';
     });
 }
 

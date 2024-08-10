@@ -70,8 +70,7 @@ body {
     top: 0;
     z-index: 1000;
 }
-
-main {
+#home {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -126,7 +125,11 @@ main {
 #menu-light,
 #menu-dark {
     width: 200px;
-    height: fill-available;
+    height: auto;
+}
+
+.focus-container:focus-within {
+    outline: 3px solid var(--yellow);
 }
 
 #navbar ul {
@@ -139,12 +142,12 @@ main {
 #navbar ul li a {
     text-decoration: none;
     color: white;
-    padding: 0.5em 0.4em;
+    padding: 0.3em 0.5em 0.3em 0.5em;
     margin: 0 0.3em;
     font-size: 1.5em;
     font-weight: bold;
     border-radius: 2em;
-    border: 2px solid transparent;
+    border: 3px solid transparent;
 }
 
 #navbar ul li a:hover,
@@ -162,6 +165,10 @@ main {
     border: 0;
 }
 
+#menuToggle {
+    margin-left: 1em;
+}
+
 #darkToggle span img {
     width: 4em;
     height: auto;
@@ -170,7 +177,6 @@ main {
 #menuToggle span img {
     width: 4em;
     height: auto;
-    padding-left: 1em;
 }
 
 .light-mode .light-mode-toggle,
@@ -186,29 +192,6 @@ main {
 #menuToggle {
     display: none;
 }
-
-/* scrollbar */
-/* This applies to the whole page */
-
-/*
-body::-webkit-scrollbar {
-    width: 15px;
-}
-
-body::-webkit-scrollbar-track {
-    background: var(--lighterred);
-    border-radius: 10px;
-}
-
-body::-webkit-scrollbar-thumb {
-    background: var(--darkred);
-    border-radius: 10px;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-    background: var(--midred);
-}
-*/
 
 /* Darkmode */
 .light-mode #logo-light {
@@ -465,6 +448,16 @@ body::-webkit-scrollbar-thumb:hover {
         border-top: none;
         padding: 1em;
         display: none;
+        text-align: center;
+    }
+
+    #navbar ul li {
+        padding: 0em 0em 1.5em 0em;
+    }
+
+    .dark-mode #navbar ul {
+        background-color: var(--midblue);
+        border-color: var(--darkblue);
     }
 
     #menuToggle {
