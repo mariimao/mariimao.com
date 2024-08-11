@@ -91,8 +91,9 @@ body {
     width: 100vw;
     background-color: var(--midred);
     color: white;
-    padding: 2em 0;
+    padding: 1.2em 0;
     text-align: center;
+    justify-content: center;
     border-top: 4px solid var(--darkred);
 }
 
@@ -468,6 +469,7 @@ body {
         padding: 0.5em;
         /* display: none; */
         text-align: right;
+        /* font-size: larger; */
     }
 
     #navbar ul:nth-of-type(2) li {
