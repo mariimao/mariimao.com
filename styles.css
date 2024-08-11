@@ -116,7 +116,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8em 2.5em;
+    padding: 0.8em 1.5em;
     background-color: var(--midred);
     z-index: 1000;
     border-bottom: 4px solid var(--darkred);
@@ -472,6 +472,7 @@ body {
 
     #navbar ul:nth-of-type(2) li {
         padding: 0em 0em 1.5em 0em;
+        /* font-size: 2em; */
     }
 
     .dark-mode #navbar ul:nth-of-type(2) {
@@ -541,7 +542,7 @@ body {
 }
 
 #about {
-    /* min-height: 97vh; */
+    min-height: 75vh;
     margin: 20px 4px;
     max-width: 650px;
 }
@@ -565,6 +566,7 @@ main img {
 
 .dark-mode #about-wall {
     background-image: url('attachments/about-dark.svg'); 
+    background-color: var(--blue1);
 }
 
 #about-title {
