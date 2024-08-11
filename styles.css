@@ -659,10 +659,6 @@ p {
         height:auto;
     }
 
-    #socials {
-        /* padding: 10px; */
-    }
-
     .column {
         display: flex;
         flex-direction: column;
