@@ -6,64 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mary Zhao</title>
     <meta id="theme-color" name="theme-color" content="9a5752"/>
-    <meta name="Mariimao Homepage" content="Check out my website!">
+    <meta name="About Me" content="Find out more about the creator of this website">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="attachments/favicon.svg"/>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
-<body id="home-wall">
+<body id="about-wall">
     <div id="header">
         <div id="logoandnav">
-            <a href="/">
+            <a id="logo" class="focus-container " href="/">
                 <img id="logo-light" src="attachments/logo.svg" alt="mariimao" title="Go to home">
-                <img id="logo-dark" src="attachments/logo-dark.svg" alt="mariimao" title="Go to home">
             </a>
             <nav id="navbar">
-                <ul id="navlinks">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="works.html">Works</a></li>
-                    <li><a href="notes.html">Notes</a></li>
-                    <li><a href="attachments/Resume.pdf" target="_blank">Resume</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul>
+                    <li><a class="focus-container" href="about.html">About</a></li>
+                    <li><a class="focus-container" href="works.html">Works</a></li>
+                    <li><a class="focus-container" href="attachments/Resume.pdf" target="_blank">Resume</a></li>
+                    <li><a class="focus-container" href="contact.html">Contact</a></li>
                 </ul>
-                <button id="darkToggle" aria-label="Toggle dark mode" title="Switch to dark mode">
-                    <span class="light-mode-toggle">
-                        <img id="mode-dark" src="attachments/mode-dark.svg" alt="Moon icon to switch to dark mode">
-                    </span>
+                <button id="darkToggle" class="focus-container" aria-label="Toggle dark mode" title="Toggle light and dark mode">
                     <span class="dark-mode-toggle">
-                        <img id="mode-light" src="attachments/mode-light.svg" alt="Sun icon to switch to light mode">
+                        <img id="mode-light" src="attachments/mode-light.svg" alt="Icon to toggle light and dark modes">
                     </span>
                 </button>
             
-                <button id="menuToggle" aria-label="Toggle menu" title="Open menu">
-                    <span class="light-menu-toggle">
+                <button id="menuToggle" class="focus-container" aria-label="Toggle menu" title="Toggle menu">
+                    <!-- <span class="light-menu-toggle">
                         <img id="menu-dark" src="attachments/menu-dark.svg" alt="Menu icon to toggle navigation">
-                    </span>
+                    </span> -->
                     <span class="dark-menu-toggle">
                         <img id="menu-light" src="attachments/menu-light.svg" alt="Menu icon to toggle navigation">
                     </span>
                 </button>
+        
+                <ul>
+                    <li><a class="focus-container" href="about.html">About</a></li>
+                    <li><a class="focus-container" href="works.html">Works</a></li>
+                    <li><a class="focus-container" href="attachments/Resume.pdf" target="_blank">Resume</a></li>
+                    <li><a class="focus-container" href="contact.html">Contact</a></li>
+                </ul>
             </nav>
         </div>
         <div class="scallop-container"></div>
-        
-
-
-
-
     </div>
     <main id="about">
+        <h1 id="about-title">About Mary Zhao</h1>
+        <div class="columns-container">
+            <div class="column">
+                <p>Hello, welcome to my website! I hope you enjoy your stay here :)
+                <p>I am a student at the University of Toronto, within the Bachelor of Information program. </p>
+                <p>I am passionate about human-computer interactions and user experience design. </p>
+                <p>I hope to make the digital world a more accessible and inclusive place, while also making it fun and engaging. </p>
+                <p>When I'm not at my desk, you can find me playing video games, drawing, or going for a run.</p>
+            </div>
+            <div class="column column-center">
+                <img src="attachments/profile.png" alt="A photo of Mary Zhao" id="profile">
+                <div id="socials">
+                    <div id="tape"></div>
+                    <p style="font-size: larger;">Find me on:</p>
+                    <ul id="social-media-icons">
+                        <li><a href="https://www.linkedin.com/in/mariimao/" target="_blank" class="focus-container-alt"><img src="attachments/linkedin.svg" id="linkedin"></a></li>
+                        <li><a href="https://github.com/mariimao" target="_blank" class="focus-container-alt"><img src="attachments/github.svg" id="github"></a></li>
+                        <li><a href="mailto:mary.zhao@mail.utoronto.ca" target="_blank" class="focus-container-alt"><img src="attachments/email.svg" id="email"></a></li>
+                    </li>
+                </div>
+            </div>
+        </div>
     </main>
-
     <div id="footer">
         <div id="copyright">
             <p>&copy; 2024 Mary Zhao</p>
         </div>
     </div>
 
-    <!-- <script src="script.js"></script> -->
+    
     <script src="darkmode.js"></script>
     <script src="menu.js"></script>
 </body>

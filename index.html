@@ -16,22 +16,17 @@
 <body id="home-wall">
     <div id="header">
         <div id="logoandnav">
-            <a id="logo" class="focus-container" href="/">
+            <a id="logo" class="focus-container " href="/">
                 <img id="logo-light" src="attachments/logo.svg" alt="mariimao" title="Go to home">
-                <img id="logo-dark" src="attachments/logo-dark.svg" alt="mariimao" title="Go to home">
             </a>
             <nav id="navbar">
-                <ul id="navlinks">
+                <ul>
                     <li><a class="focus-container" href="about.html">About</a></li>
                     <li><a class="focus-container" href="works.html">Works</a></li>
-                    <li><a class="focus-container" href="notes.html">Notes</a></li>
                     <li><a class="focus-container" href="attachments/Resume.pdf" target="_blank">Resume</a></li>
                     <li><a class="focus-container" href="contact.html">Contact</a></li>
                 </ul>
                 <button id="darkToggle" class="focus-container" aria-label="Toggle dark mode" title="Toggle light and dark mode">
-                    <span class="light-mode-toggle">
-                        <img id="mode-dark" src="attachments/mode-dark.svg" alt="Moon icon to switch to dark mode">
-                    </span>
                     <span class="dark-mode-toggle">
                         <img id="mode-light" src="attachments/mode-light.svg" alt="Sun icon to switch to light mode">
                     </span>
@@ -45,33 +40,35 @@
                         <img id="menu-light" src="attachments/menu-light.svg" alt="Menu icon to toggle navigation">
                     </span>
                 </button>
+        
+                <ul>
+                    <li><a class="focus-container" href="about.html">About</a></li>
+                    <li><a class="focus-container" href="works.html">Works</a></li>
+                    <li><a class="focus-container" href="attachments/Resume.pdf" target="_blank">Resume</a></li>
+                    <li><a class="focus-container" href="contact.html">Contact</a></li>
+                </ul>
             </nav>
         </div>
         <div class="scallop-container"></div>
-        
-
-
-
-
     </div>
     <main id="home">
         <div class="left"></div>
         <div class="right">
-        <h1 id="welcome">WELCOME!</h1>
-        <p id="intro">I hope enjoy your stay here :)</p>
+        <h1 id="welcome">WELCOME</h1>
+        <p id="intro">Thank you for stopping by!</p>
         
         <div id="bulletinboard">
             <h2 id="news">News</h2>
             <ul id="articles">
-                <li>
+                <li class="focus-container">
                     <a href="about.html">
-                        <span class="arrow">➔</span>
+                        <span class="arrow no-select">➔</span>
                         The website is live!
                     </a>
                 </li>
-                <li>
+                <li class="focus-container">
                     <a href="about.html">
-                        <span class="arrow">➔</span>
+                        <span class="arrow no-select">➔</span>
                         Check my About page :)
                     </a>
                 </li>
@@ -87,10 +84,9 @@
         </div>
     </div>
 
-    <!-- <script src="script.js"></script> -->
+    <!-- <script src="loadheaderfooter.js"></script> -->
     <script src="darkmode.js"></script>
     <script src="menu.js"></script>
-    <script src="focus.js"></script>
 </body>
 
 </html>

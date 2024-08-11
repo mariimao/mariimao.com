@@ -1,46 +1,67 @@
 function toggleMenu() {
     const menuToggle = document.getElementById('menuToggle');
-    const menudark = document.getElementById('menu-dark');
+    // const menudark = document.getElementById('menu-dark');
     const menulight = document.getElementById('menu-light');
     const navbar = document.getElementById('navbar');
-    const navbarUl = navbar.querySelector('ul'); // Get the ul within the navbar
+    const navbarUl = navbar.querySelector('ul:nth-of-type(2)'); // Get the ul within the navbar
 
-    if (menuToggle.style.display === 'none') {
-        navbarUl.style.display = 'flex';
-        navbarUl.style.flexDirection = 'row';
-    }
 
     menuToggle.addEventListener('click', function() {
         console.log('menuToggle clicked');
-        if (menulight.src.includes("menu-light.svg")) {
-            menudark.src = "attachments/menu-close-dark.svg";
-            menulight.src = "attachments/menu-close.svg";
+        if (!menulight.src.includes("close")) {
+            if (!menulight.src.includes("dark")) {
+                menulight.src = "attachments/menu-close.svg";
+            } else {
+                menulight.src = "attachments/menu-close-dark.svg";
+            }
             navbarUl.style.display = 'block';
-            const firstLi = navbarUl.querySelector('a'); // Get the first li within the ul
-            if (firstLi) {
-                firstLi.setAttribute('tabindex', '0'); // Make the first li focusable
-                firstLi.focus();
-            }
         } else {
-            menudark.src = "attachments/menu-dark.svg";
-            menulight.src = "attachments/menu-light.svg";
-            navbarUl.style.display = 'none';
-            const firstLi = navbarUl.querySelector('a'); // Get the first li within the ul
-            if (firstLi) {
-                firstLi.removeAttribute('tabindex'); // Remove tabindex when hidden
+            if (!menulight.src.includes("dark")) {
+                menulight.src = "attachments/menu-light.svg";
+            } else {
+                menulight.src = "attachments/menu-dark.svg";
             }
+            navbarUl.style.display = 'none';
         }
 
         menuToggle.style.outline = 'none'; // Remove focus outline
     });
 
+    function handleResize() {
+        if (window.innerWidth > 820) {
+            if (!menulight.src.includes("dark")) {
+                menulight.src = "attachments/menu-light.svg";
+            } else {
+                menulight.src = "attachments/menu-dark.svg";
+            }
+            navbarUl.style.display = 'none';
+        }
+    }
+
+    function handleClickOutside(event) {
+        if (!navbarUl.contains(event.target) && !menuToggle.contains(event.target)) {
+            if (!menulight.src.includes("dark")) {
+                menulight.src = "attachments/menu-light.svg";
+            } else {
+                menulight.src = "attachments/menu-dark.svg";
+            }
+            navbarUl.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('click', handleClickOutside);
+
     menuToggle.addEventListener('focusin', function() {
-        menuToggle.style.outline = '3px solid var(--yellow)';
+        menuToggle.style.outline = '4px solid var(--orange)';
     });
 
     menuToggle.addEventListener('focusout', function() {
         menuToggle.style.outline = 'none';
     });
+
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
