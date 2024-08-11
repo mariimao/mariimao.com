@@ -524,8 +524,10 @@ body {
         margin-top: 2%;
         font-size: 4vw;
         font-weight: 800;
+        text-align: center;
         color: var(--darkred);
         padding: 0;
+        margin-left: 7%;
     }
 
     #bulletinboard {
