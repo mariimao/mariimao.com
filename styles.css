@@ -459,7 +459,7 @@ body {
         flex-direction: column;
         list-style-type: none;
         position: absolute;
-        top: 78.5px;
+        top: 78px;
         z-index: 1000;
         background-color: var(--midred);
         border-radius: 0em 0em 1em 1em;

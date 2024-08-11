@@ -5,9 +5,10 @@ function initializeDarkModeToggle() {
     const logo = document.getElementById('logo-light');
     const darkmodeIcon = document.getElementById('mode-light');
     const menuIcon = document.getElementById('menu-light');
-    
+    const linkedinIcon = document.getElementById('linkedin');
+    const githubIcon = document.getElementById('github');
+    const emailIcon = document.getElementById('email');
     let isdark = false;
-
 
     console.log('initializeDarkModeToggle');
     console.log(darkToggle);
@@ -16,6 +17,9 @@ function initializeDarkModeToggle() {
     console.log(logo);
     console.log(darkmodeIcon);
     console.log(menuIcon);
+    console.log(linkedinIcon);
+    console.log(githubIcon);
+    console.log(emailIcon);
 
     // Check for saved user preference
     const currentTheme = localStorage.getItem('theme');
@@ -26,6 +30,9 @@ function initializeDarkModeToggle() {
             logo.src = "attachments/logo-dark.svg";
             darkmodeIcon.src = "attachments/mode-dark.svg";
             menuIcon.src = "attachments/menu-dark.svg";
+            linkedinIcon.src = "attachments/linkedin-dark.svg";
+            githubIcon.src = "attachments/github-dark.svg";
+            emailIcon.src = "attachments/email-dark.svg";
             isdark = true;
         } else {
             themeColorMetaTag.setAttribute('content', '#9a5752'); // Light mode theme color
@@ -51,6 +58,9 @@ function initializeDarkModeToggle() {
             logo.src = "attachments/logo-dark.svg";
             darkmodeIcon.src = "attachments/mode-dark.svg";
             menuIcon.src = "attachments/menu-dark.svg";
+            linkedinIcon.src = "attachments/linkedin-dark.svg";
+            githubIcon.src = "attachments/github-dark.svg";
+            emailIcon.src = "attachments/email-dark.svg";
             isdark = true;
         } else { // Switch to light mode
             htmlElement.classList.remove('dark-mode');
@@ -60,6 +70,9 @@ function initializeDarkModeToggle() {
             logo.src = "attachments/logo.svg";
             darkmodeIcon.src = "attachments/mode-light.svg";
             menuIcon.src = "attachments/menu-light.svg";
+            linkedinIcon.src = "attachments/linkedin.svg";
+            githubIcon.src = "attachments/github.svg";
+            emailIcon.src = "attachments/email.svg";
             isdark = false;
         }
         darkToggle.style.outline = 'none'; // Remove focus outline
