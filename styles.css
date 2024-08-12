@@ -147,16 +147,25 @@ body {
         transform: scale(1.05);
         /* background-color: var(--yellow); */
     }
+
+    border-radius: 100px;
 }
 
-.focus-container:focus-within {
+.focus-container:focus-visible {
     outline: 4px solid var(--orange);
-    border-radius: 15px;
 }
 
-.focus-container-alt:focus-within {
+.focus-container-alt:focus-visible {
     outline: 4px solid #d07e12;
-    border-radius: 15px;
+}
+
+.focus-container:click,
+.focus-container img:click,
+.focus-container button:click,
+.focus-container-alt:click,
+.focus-container-alt img:click,
+.focus-container-alt button:click {
+    outline: none;
 }
 
 *::selection {

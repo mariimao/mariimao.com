@@ -62,15 +62,6 @@ function initializeDarkModeToggle() {
             menuIcon.src = "attachments/menu-light.svg";
             isdark = false;
         }
-        darkToggle.style.outline = 'none'; // Remove focus outline
-    });
-
-    darkToggle.addEventListener('focusin', function() {
-        darkToggle.style.outline = '4px solid var(--orange)';
-    });
-
-    darkToggle.addEventListener('focusout', function() {
-        darkToggle.style.outline = 'none';
     });
 }
 

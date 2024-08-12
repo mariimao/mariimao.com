@@ -23,8 +23,6 @@ function toggleMenu() {
             }
             navbarUl.style.display = 'none';
         }
-
-        menuToggle.style.outline = 'none'; // Remove focus outline
     });
 
     function handleResize() {
@@ -50,14 +48,6 @@ function toggleMenu() {
     }
 
     document.addEventListener('click', handleClickOutside);
-
-    menuToggle.addEventListener('focusin', function() {
-        menuToggle.style.outline = '4px solid var(--orange)';
-    });
-
-    menuToggle.addEventListener('focusout', function() {
-        menuToggle.style.outline = 'none';
-    });
 
     window.addEventListener('resize', handleResize);
 
