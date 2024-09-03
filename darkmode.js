@@ -23,9 +23,9 @@ function initializeDarkModeToggle() {
         htmlElement.classList.add(currentTheme);
         if (currentTheme === 'dark-mode') {
             themeColorMetaTag.setAttribute('content', '#262a67'); // Dark mode theme color
-            logo.src = "attachments/logo-dark.svg";
-            darkmodeIcon.src = "attachments/mode-dark.svg";
-            menuIcon.src = "attachments/menu-dark.svg";
+            logo.src = "/attachments/logo-dark.svg";
+            darkmodeIcon.src = "/attachments/mode-dark.svg";
+            menuIcon.src = "/attachments/menu-dark.svg";
             isdark = true;
         } else {
             themeColorMetaTag.setAttribute('content', '#9a5752'); // Light mode theme color
@@ -48,18 +48,18 @@ function initializeDarkModeToggle() {
             htmlElement.classList.add('dark-mode');
             localStorage.setItem('theme', 'dark-mode');
             themeColorMetaTag.setAttribute('content', '#262a67'); // Dark mode theme color
-            logo.src = "attachments/logo-dark.svg";
-            darkmodeIcon.src = "attachments/mode-dark.svg";
-            menuIcon.src = "attachments/menu-dark.svg";
+            logo.src = "/attachments/logo-dark.svg";
+            darkmodeIcon.src = "/attachments/mode-dark.svg";
+            menuIcon.src = "/attachments/menu-dark.svg";
             isdark = true;
         } else { // Switch to light mode
             htmlElement.classList.remove('dark-mode');
             htmlElement.classList.add('light-mode');
             localStorage.setItem('theme', 'light-mode');
             themeColorMetaTag.setAttribute('content', '#9a5752'); // Light mode theme color
-            logo.src = "attachments/logo.svg";
-            darkmodeIcon.src = "attachments/mode-light.svg";
-            menuIcon.src = "attachments/menu-light.svg";
+            logo.src = "/attachments/logo.svg";
+            darkmodeIcon.src = "/attachments/mode-light.svg";
+            menuIcon.src = "/attachments/menu-light.svg";
             isdark = false;
         }
     });

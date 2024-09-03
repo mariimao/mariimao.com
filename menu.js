@@ -10,16 +10,16 @@ function toggleMenu() {
         console.log('menuToggle clicked');
         if (!menulight.src.includes("close")) {
             if (!menulight.src.includes("dark")) {
-                menulight.src = "attachments/menu-close.svg";
+                menulight.src = "/attachments/menu-close.svg";
             } else {
-                menulight.src = "attachments/menu-close-dark.svg";
+                menulight.src = "/attachments/menu-close-dark.svg";
             }
             navbarUl.style.display = 'block';
         } else {
             if (!menulight.src.includes("dark")) {
-                menulight.src = "attachments/menu-light.svg";
+                menulight.src = "/attachments/menu-light.svg";
             } else {
-                menulight.src = "attachments/menu-dark.svg";
+                menulight.src = "/attachments/menu-dark.svg";
             }
             navbarUl.style.display = 'none';
         }
@@ -28,9 +28,9 @@ function toggleMenu() {
     function handleResize() {
         if (window.innerWidth > 820) {
             if (!menulight.src.includes("dark")) {
-                menulight.src = "attachments/menu-light.svg";
+                menulight.src = "/attachments/menu-light.svg";
             } else {
-                menulight.src = "attachments/menu-dark.svg";
+                menulight.src = "/attachments/menu-dark.svg";
             }
             navbarUl.style.display = 'none';
         }
@@ -39,9 +39,9 @@ function toggleMenu() {
     function handleClickOutside(event) {
         if (!navbarUl.contains(event.target) && !menuToggle.contains(event.target)) {
             if (!menulight.src.includes("dark")) {
-                menulight.src = "attachments/menu-light.svg";
+                menulight.src = "/attachments/menu-light.svg";
             } else {
-                menulight.src = "attachments/menu-dark.svg";
+                menulight.src = "/attachments/menu-dark.svg";
             }
             navbarUl.style.display = 'none';
         }
