@@ -67,39 +67,53 @@
     <main class="work-page">
         <a href="javascript:history.back()" class="back-arrow no-underline focus-container-alt"><span class="no-select">🡰</span></a>
         <div class="work-text">
-            <img class="drink" src="/attachments/coffee1.svg">
-            <aside style="color: red;">This page is a work in progress! I hope to have it complete soon. Sorry for the wait.</aside>
-            <h1>Portfolio Website</h1>
-            <div class="card-tags">
-                <span class="card-tag coding">Coding</span>
-                <span class="card-tag uiux">UI/UX Design</span>
+            <div class="drink-container">
+                <img class="drink" src="portfolio-website/cup.svg">
+                <div class="drink-overlay"></div>
             </div>
-            <h2>Overview</h2>
+            <h1>Portfolio Website</h1>
             <p>
                 During the summer of 2024, I did a work study as a Web Assistant for the <a href="https://communications.utoronto.ca/" rel="noopener noreferrer" target="_blank">University of Toronto Communications</a> team. 
                 Wanting to put what I learned to use, I decided to cocurrently work on this personal website. 
                 My goal was to create a space that felt personal and fun, while ensuring that it was accessible and easy to navigate.
             </p>
-            <ul>
-                <li>Role: Designer, Developer</li>
-                <li>Timeline: 4 months</li>
-                <li>Tools: Figma, GitHub, HTML, CSS, JavaScript, Netlify</li>
+            <ul class="overview-summary">
+                <li><strong>Role:</strong><br>Designer, Developer</li>
+                <li><strong>Timeline:</strong><br>4 months</li>
+                <li><strong>Tools:</strong><br> Figma, GitHub, HTML, CSS, JavaScript, Netlify</li>
+                <li><strong>Team:</strong><br> Independent</li>
             </ul>
 
-            <h2>Research and Inspiration</h2>
+            <h2>Research</h2>
             <h3>Target Audience</h3>
             <p>
-                My target audience for this website was <i>recruiters</i> and potential <i>collaborators</i> in the design and tech industry.
+                My target audience for this website was <strong>recruiters</strong> and potential <strong>collaborators</strong> in the design and tech industry.
                 They want portfolios that are <i>easy to scan</i> and provide a clear overview of the designer's skills and experience.
             </p>     
             <h4>User Persona</h4>
-            <p>
-                <b>Name:</b> Alex<br>
-                <b>Occupation:</b> Senior Recruiter at a Tech Company<br>
-                <b>Background:</b> Alex has been working as a recruiter for the past 10 years. They are tech-savvy, comfortable navigating various online platforms, and accustomed to reviewing portfolios quickly. <br>
-                <b>Goals:</b> Find a UI/UX designer with a strong portfolio that demonstrates both creative and technical skills. Does not have a lot of time to spend on a portfolio.<br>
-                <b>Opportunity areas:</b> Short, impactful portfolio pieces with clear visuals. Well-written case studies that explain the designer’s thought process, challenges faced, and solutions. Easily accessible contact information.<br>
-            </p>
+            <table class="user-persona-table">
+                <tr>
+                    <th>Name</th>
+                    <td>Alex</td>
+                </tr>
+                <tr>
+                    <th>Occupation</th>
+                    <td>Senior Recruiter at a Tech Company</td>
+                </tr>
+                <tr>
+                    <th>Background</th>
+                    <td>Alex has been working as a recruiter for the past 10 years. They are tech-savvy, comfortable navigating various online platforms, and accustomed to reviewing portfolios quickly.</td>
+                </tr>
+                <tr>
+                    <th>Goals</th>
+                    <td>Find a UI/UX designer with a strong portfolio that demonstrates both creative and technical skills. Does not have a lot of time to spend on a portfolio.</td>
+                </tr>
+                <tr>
+                    <th>Opportunity areas</th>
+                    <td>Short, impactful portfolio pieces with clear visuals. Well-written case studies that explain the designer’s thought process, challenges faced, and solutions. Easily accessible contact information.</td>
+                </tr>
+            </table>
+
             <h3>Secondary Research</h3>
             <p>
                 I started by looking at the websites of other designers and developers to see what they included and how they presented their work.
@@ -116,8 +130,9 @@
             <img src="/works/portfolio-website/concept-sketch-2.png" alt="Concept sketches of the website" style="width: 100%; height: auto;">
             <h3>Prototypes</h3>
             <p>Check out the <a href="https://www.figma.com/design/2cFmdwtT68OU9hhWIS0rUU/website?node-id=0-1&t=UnGhKFdWBTlPL1L7-1">Figma</a> file.</p>
+            <!-- <iframe style="border: 4px solid rgba(54, 13, 13, 0.1);" width="100%" height="auto" src="https://embed.figma.com/design/2cFmdwtT68OU9hhWIS0rUU/website?node-id=0-1&embed-host=share" allowfullscreen></iframe> -->
             <!-- include some screenshots -->
-            <h2>Development and Analysis</h2>
+            <h2>Implementation & Testing</h2>
             <p>
                 Creating this website was a great learning experience for me. I learned how to use HTML, CSS, and JavaScript to create a responsive and interactive website.
                 I also learned how to optimize websites for performance, accessibility, and the search engine (SEO).
@@ -128,7 +143,7 @@
             </p>
 
             <h2>Reflection</h2>
-
+            <!-- usability testing? -->
 
             <h3>Future Improvements</h3>
             <ul>
@@ -137,10 +152,10 @@
                 <li>more case studies</li>
                 <li>if I need to, I might consider transferring to a CSM like wordpress or Drupal.</li>
             </ul>
-
-
-            <aside>Thank you for reading this! Please check out my other works if you're interested. </aside>
-            <a href="/works.html" class="focus-container-alt">Back to Works</a>
+        </div>
+        <div class="end-of-work">
+            <aside>Thank you for reading this! <br> Please check out my other works if you're interested.</aside>
+            <a href="/works.html" class="focus-container-alt other-works">BACK TO WORKS</a>
         </div>
     </main>
     <div id="footer">
