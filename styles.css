@@ -759,7 +759,7 @@ p {
     text-decoration: none; /* Remove underline from links */
     color: inherit; /* Inherit text color */
     /* background-color: var(--lightestred); */
-    /* transition: transform 0.3s ease-out; */
+    transition: transform 0.3s ease-out;
 }
 
 .card:hover {
@@ -767,6 +767,11 @@ p {
     /* background-color: var(--lightestred); */
     border-color: var(--midred);
     box-shadow: 4px 4px 0px var(--yellow);
+    transform: scale(1.01);
+
+    img {
+        filter: contrast(0.6) brightness(1.2);
+    }
 }
 
 .dark-mode .card {
@@ -1190,8 +1195,16 @@ strong {
     background-color: white;
 }
 
+.gallery-item-button:focus-visible {
+    outline: none;
+}
+
 .dark-mode .gallery-item-button {
     background-color: var(--midblue);
+}
+
+.gallery-item-container:focus-within {
+    outline: 4px solid var(--orange);
 }
 
 .gallery-item-container {
@@ -1201,7 +1214,7 @@ strong {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    /* transition: transform 0.3s ease-out; */
+    transition: transform 0.3s ease-out;
 }
 
 .gallery-item {
@@ -1217,10 +1230,12 @@ strong {
     /* background-color: var(--lightestred); */
     /* border-color: var(--midred); */
     box-shadow: 4px 4px 0px var(--yellow);
+    transform: scale(1.02);
 }
 
-.gallery-item-container:hover .gallery-item-button {
-    opacity: 70%;
+.gallery-item-container:hover .gallery-item-button img {
+    /* opacity: 70%; */
+    filter: contrast(0.6) brightness(1.2);
 }
 
 .fullscreen-overlay {
