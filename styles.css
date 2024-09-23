@@ -115,6 +115,11 @@ main {
     align-items: center;
 }
 
+/* hide blog temporarily */
+#navbar ul li:nth-of-type(3) {
+    display: none;
+}
+
 #logo-light,
 #logo-dark,
 #menu-light,
@@ -1183,6 +1188,10 @@ strong {
 .gallery-item-button {
     border: none;
     background-color: white;
+}
+
+.dark-mode .gallery-item-button {
+    background-color: var(--midblue);
 }
 
 .gallery-item-container {
