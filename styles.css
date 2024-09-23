@@ -80,6 +80,7 @@ main {
     text-align: center;
     justify-content: center;
     border-top: 4px solid var(--darkred);
+    /* user-select: none; */
 }
 
 #copyright p {
@@ -106,6 +107,7 @@ main {
     background-color: var(--midred);
     z-index: 1000;
     border-bottom: 4px solid var(--darkred);
+    user-select: none;
 }
 
 #navbar {
@@ -408,11 +410,16 @@ main {
     font-size: 16px;
     margin-right: 10px; /* Space between arrow and text */
     flex-shrink: 0; /* Prevent arrow from shrinking */
+    background-image: url('attachments/arrow-forward-dark.svg');
+    background-size: 16px auto;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .dark-mode .arrow {
     background-color: var(--yellow); /* Adjust circle background color in dark mode */
     color: var(--darkblue); /* Adjust arrow color in dark mode */
+    background-image: url('attachments/arrow-forward-blue.svg');
 }
 
 #articles li:hover,
@@ -431,12 +438,14 @@ main {
 #articles li:focus-within .arrow {
     background-color: var(--lightestred); /* Invert circle background color on hover and focus */
     color: var(--darkred); /* Invert arrow color on hover and focus */
+    background-image: url('attachments/arrow-forward-light.svg');
 }
 
 .dark-mode #articles li:hover .arrow,
 .dark-mode #articles li:focus-within .arrow {
     background-color: var(--darkblue); /* Adjust circle background color on hover and focus in dark mode */
     color: var(--yellow); /* Adjust arrow color on hover and focus in dark mode */
+    background-image: url('attachments/arrow-forward-yellow.svg');
 }
 
 #articles li:hover a,
@@ -807,6 +816,14 @@ p {
     background-color: var(--yellow);
 }
 
+.web {
+    background-color: var(--lighterred);
+}
+
+.misc {
+    background-color: #e4aea9    ;
+}
+
 .dark-mode .coding {
     background-color: var(--blue2);
 }
@@ -815,6 +832,13 @@ p {
     background-color: #8c6aa8;
 }
 
+.dark-mode .web {
+    background-color: var(--blue3);
+}
+
+.dark-mode .misc {
+    background-color: var(--darkteal);
+}
 
 @media screen and (max-width: 820px), screen and (orientation: portrait) {
     .card-container {
@@ -885,6 +909,10 @@ p {
     background-color: white;
     color: var(--darkred);
     font-size: 30px !important;
+    background-image: url('attachments/arrow-back-light.svg');
+    background-size: 30px auto;
+    background-repeat: no-repeat;
+    background-position: center center;
     transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); /* Explicit transition for smoother animation */
 }
 
@@ -892,6 +920,7 @@ p {
     background-color: var(--darkblue);
     border-color: var(--darkblue);
     color: var(--darkblue);
+    background-image: url('attachments/arrow-back-dark.svg');
 }
 
 .back-arrow:hover {
@@ -972,11 +1001,11 @@ p {
         margin-left: 15px;
     }
 
-    .drink {
-        /* left: 100vw; */
-        left: 83%;
+    .drink-container {
+        left: 82%;
     }
 }
+
 
 a {
     color: var(--darkred);
@@ -1143,4 +1172,69 @@ strong {
 .dark-mode .other-works {
     border-color: var(--darkblue);
     background-color: var(--darkblue);
+}
+
+.gallery {
+    column-count: 3;
+    column-gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery-item-button {
+    border: none;
+    background-color: white;
+}
+
+.gallery-item-container {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    /* transition: transform 0.3s ease-out; */
+}
+
+.gallery-item {
+    width: 100%;
+    height: auto;
+    break-inside: avoid;
+    /* border-radius: 15px; */
+    /* transition: transform 0.3s ease-out; */
+}
+
+.gallery-item-container:hover {
+    /* transform: scale(1.025); */
+    /* background-color: var(--lightestred); */
+    /* border-color: var(--midred); */
+    box-shadow: 4px 4px 0px var(--yellow);
+}
+
+.gallery-item-container:hover .gallery-item-button {
+    opacity: 70%;
+}
+
+.fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.fullscreen-image {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 820px), screen and (orientation: portrait) {
+    .gallery {
+        column-count: 2;
+    }
 }
